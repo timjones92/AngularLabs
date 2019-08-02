@@ -1,5 +1,6 @@
-<div class="container mt-2 border">
-    <form class="mt-2">
+<div class="container mt-2">
+    <form class="form-signin mt-2 border">
+    <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -13,7 +14,7 @@
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
-    <button type="submit" (click)="navURL()" class="btn btn-primary">Submit</button>
+    <button type="submit" (click)="navURL()" class="btn btn-primary w-100">Submit</button>
     <p>{{error}}</p>
     </form>
 </div>
