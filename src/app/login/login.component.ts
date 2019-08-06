@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { STRING_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,13 @@ export class LoginComponent implements OnInit {
 
   email = "";
   password = "";
+  
+  users = [
+    {"email": "cap@avengers.com", "password": "123456"},
+    {"email": "ironman@avengers.com", "password": "654321"},
+    {"email": "thor@avengers.com", "password": "123abc"}
+  ]
+  
   error = "";
 
   cap = {"email": "cap@avengers.com", "password": "123456"}
@@ -20,14 +28,12 @@ export class LoginComponent implements OnInit {
   }
 
   navURL() {
-    if (this.email == this.cap.email && this.cap.password != this.cap.password) {
-      this.error = "There is a probelm with the credentials.";
-      alert("Not a valid user!");
-    } else if (this.cap.password != this.cap.password){
-      this.error = "There is a probelm with the credentials.";
-      alert("Not a valid user!");
-    } else {
+    var user = {"email": this.email, "password": this.password}
+    if (this.users.some(person => (person.email == user.email) && (person.password == user.password))) {
       this.router.navigateByUrl('/account');
+    } else {
+      this.error = "There is a probelm with the credentials.";
+      alert("Not a valid user!");
     }
   };
 
