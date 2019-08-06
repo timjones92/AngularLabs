@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { STRING_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-login',
