@@ -1,4 +1,20 @@
 <div class="containter">
-    <h1 class="text-center">Accounts Page</h1>
-    <img src="https://data.junkee.com/wp-content/uploads/2019/04/Avengers-Endgame4.jpg" class="img-fluid" alt="Marvel's Avengers">
+    <h1 class="text-center">Welcome {{username}}.</h1>
+    <img src="https://data.junkee.com/wp-content/uploads/2019/04/Avengers-Endgame4.jpg" class="img-fluid w-100" alt="Marvel's Avengers">
+    <table class="table table-bordered text-center my-2">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Your Email</th>
+                <th scope="col">Your Birthday</th>
+                <th scope="col">Your Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{email}}</td>
+                <td>{{birthdate}}</td>
+                <td>{{age}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
