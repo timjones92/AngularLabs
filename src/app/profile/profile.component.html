@@ -1,0 +1,25 @@
+<form class="w-50 mx-auto mt-4">
+  <div class="form-group">
+    <label for="inputUsername">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="Username" [(ngModel)]="username" name="username" #name="ngModel" required>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword4">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="inputCity">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Email" [(ngModel)]="email" name="email">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <label for="inputState">Date Of Birth</label>
+      <input type="text" class="form-control" [(ngModel)]="birthdate" name="birthdate">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">Age</label>
+      <input type="text" class="form-control" id="inputAge" placeholder="Age" [(ngModel)]="age" name="age">
+    </div>
+  </div>
+  <button type="submit" (click)="updateData()" class="btn btn-primary w-100">Edit</button>
+</form>
